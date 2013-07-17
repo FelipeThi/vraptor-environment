@@ -24,6 +24,8 @@ Em seu web.xml, adicione:
 		
 onde nome_do_ambiente é o ambiente atual ('producao' ou 'desenvolvimento', por exemplo).
 
+Caso queira usar mais de um arquivo de ambiente, então separe o nome do ambiente por ';'.
+
 # nome_do_ambiente.properties
 
 Seu nome_do_ambiente.properties deve ser criado em src/main/resources. Exemplo (desenvolvimento.properties):
