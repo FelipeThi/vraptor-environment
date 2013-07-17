@@ -25,6 +25,8 @@ In your web.xml add:
 
 where environment_name is the current environment ('production' or 'development' for example).
 
+note: if you want to add more environment files, you must separate environment name by ';'.
+
 # environment_name.properties
 
 Your environment_name.properties should be located at src/main/resources. Example ('development.properties'):
