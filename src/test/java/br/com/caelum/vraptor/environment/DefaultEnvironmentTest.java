@@ -66,5 +66,12 @@ public class DefaultEnvironmentTest {
         String value = defaultEnvironment.get("env_name", "fallback");
         assertEquals("development", value);
     }
+    
+    @Test
+    public void shouldLoadOneOrMoreEnvironments() throws IOException {
+    	DefaultEnvironment defaultEnvironment = new DefaultEnvironment("development;production");
+    	assertEquals("development", defaultEnvironment.get("sender"));
+    	assertEquals("production", defaultEnvironment.get("receiver"));
+    }
 
 }

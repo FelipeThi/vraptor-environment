@@ -27,9 +27,11 @@ public class DefaultEnvironment implements Environment {
             environment = "development";
         }
         this.environment = environment;
-
+        String env[] = environment.split(";");        
         loadAndPut("environment");
-        loadAndPut(environment);
+        for (int i = 0; i < env.length; i++) {
+        	loadAndPut(env[i]);
+		}
     }
 
     private void loadAndPut(String environment) throws IOException {
